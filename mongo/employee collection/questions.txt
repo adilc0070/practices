@@ -1,0 +1,50 @@
+Find all employees whose salary is greater than 70000.
+Retrieve the count of employees in each department.
+Calculate the average salary of male and female employees separately.
+Find the youngest employee.
+Find the cities where the total salary expenditure is the highest.
+Retrieve the names of female employees who work in the IT department.
+Calculate the difference between the highest and lowest salaries.
+Find employees whose names start with 'J' and are aged below 30.
+Find the department with the highest average salary.
+Retrieve the names of employees who are older than 35 and earn more than 75000.
+Find the average age of employees in each department.
+Calculate the total salary expenditure for each city.
+Retrieve the names of employees sorted alphabetically.
+Find the department with the highest number of male employees.
+Calculate the median salary of employees.
+Find the top 5 highest-paid employees.
+Determine the distribution of employees' ages (e.g., number of employees in each age group: 20-30, 30-40, etc.).
+Calculate the standard deviation of salaries.
+Find the department with the highest total salary expenditure.
+Retrieve the names of employees who have the same salary.
+Find the department with the highest average age of employees.
+Calculate the difference in average salary between male and female employees.
+Find the employees with the highest and lowest salaries in each department.
+Determine the 25th percentile salary of employees.
+Find the department with the highest standard deviation of salaries.
+Calculate the total salary expenditure for each gender.
+Retrieve the names of employees whose salaries fall within a specific range (e.g., $60,000 to $70,000).
+Find the most common age among employees.
+Determine the top 3 cities with the highest average salary.
+Find the department with the highest median salary.
+Calculate the total number of employees.
+Retrieve the names of employees who have the same age.
+Find the department with the highest number of employees aged below 30.
+Determine the 75th percentile salary of employees.
+Find the city with the highest number of employees.
+Calculate the total number of male and female employees.
+Find the department with the highest ratio of male to female employees.
+Determine the 10th percentile salary of employees.
+Find the department with the highest ratio of salary to age.
+Calculate the total number of employees in each age group (e.g., 20-30, 31-40, etc.).
+Retrieve the names of employees whose names contain a specific substring.
+Find the department with the highest ratio of female to male employees.
+Determine the average salary of employees aged below 30 in each department.
+Calculate the total salary expenditure for employees aged below 30.
+Find the department with the highest salary range (difference between the highest and lowest salary).
+Determine the 90th percentile salary of employees.
+Find the city with the highest average age of employees.
+Calculate the total number of employees in each gender-age group combination (e.g., Male, 20-30).
+Find the department with the highest average salary of female employees.
+Retrieve the names of employees who joined the company before a specific date.
