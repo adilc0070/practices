@@ -323,11 +323,159 @@ db.employee.find({department:"IT",gender:"Female"})
 db.employee.aggregate([{$group:{_id:null,max:{$max:"$salary"},min:{$min:"$salary"}}},{$project:{deffrence:{$subtract:["$max","$min"]},_id:0}}])
 [ { deffrence: 34000 } ]
 
-Find employees whose names start with 'J' and are aged below 30.
-Find the department with the highest average salary.
-Retrieve the names of employees who are older than 35 and earn more than 75000.
-Find the average age of employees in each department.
+"Find employees whose names start with 'J' and are aged below 30."
+db.employee.find({ name: /^J/i,age:{$lte:30} })
+[
+  {
+    _id: 1,
+    name: 'John',
+    age: 25,
+    gender: 'Male',
+    city: 'New York',
+    salary: 50000,
+    department: 'IT'
+  },
+  {
+    _id: 8,
+    name: 'Jessica',
+    age: 26,
+    gender: 'Female',
+    city: 'Seattle',
+    salary: 58000,
+    department: 'Finance'
+  }
+]
+"Find the department with the highest average salary."
+db.employee.aggregate([{$group:{_id:"$department",'salary(avg)':{$avg:"$salary"}}},{$sort:{"salary(avg)":-1}},{$limit:1}])
+[ { _id: 'Marketing', 'salary(avg)': 76083.33333333333 } ]
+
+"Retrieve the names of employees who are older than 35 and earn more than 75000."
+db.employee.find({age:{$gte:35},salary:{$gte:75000}},{name:1})
+[
+  { _id: 7, name: 'David' },
+  { _id: 19, name: 'Ethan' },
+  { _id: 31, name: 'Benjamin' },
+  { _id: 35, name: 'Carter' },
+  { _id: 39, name: 'Jayden' },
+  { _id: 41, name: 'Gabriel' },
+  { _id: 43, name: 'Jack' },
+  { _id: 49, name: 'Isaac' }
+]
+
+"Find the average age of employees in each department."
+db.employee.aggregate([{$group:{_id:"$department",avgAge:{$avg:"$age"}}}])
+[
+  { _id: 'Finance', avgAge: 29.666666666666668 },
+  { _id: 'Marketing', avgAge: 36.5 },
+  { _id: 'IT', avgAge: 32.61538461538461 },
+  { _id: 'HR', avgAge: 29.23076923076923 }
+]
+
 Calculate the total salary expenditure for each city.
+db.employee.aggregate([{$group:{_id:"$city",total:{$sum:"$salary"}}}])
+[
+  { _id: 'Riverside', total: 83000 },
+  { _id: 'Tulsa', total: 77000 },
+  { _id: 'Raleigh', total: 67000 },
+  { _id: 'Long Beach', total: 74000 },
+  { _id: 'Pittsburgh', total: 74000 },
+  { _id: 'Washington D.C.', total: 67000 },
+  { _id: 'Seattle', total: 58000 },
+  { _id: 'Dallas', total: 70000 },
+  { _id: 'Indianapolis', total: 73000 },
+  { _id: 'Salt Lake City', total: 74000 },
+  { _id: 'Nashville', total: 71000 },
+  { _id: 'New Orleans', total: 69000 },
+  { _id: 'Kansas City', total: 147000 },
+  { _id: 'Minneapolis', total: 73000 },
+  { _id: 'Portland', total: 69000 },
+  { _id: 'Oklahoma City', total: 71000 },
+  { _id: 'Bakersfield', total: 84000 },
+  { _id: 'Phoenix', total: 72000 },
+  { _id: 'St. Louis', total: 70000 },
+  { _id: 'Fresno', total: 73000 }
+  { _id: 'Tampa', total: 72000 },
+  { _id: 'Charlotte', total: 62000 },
+  { _id: 'Denver', total: 59000 },
+  { _id: 'Milwaukee', total: 76000 },
+  { _id: 'Virginia Beach', total: 75000 },
+  { _id: 'Oakland', total: 76000 },
+  { _id: 'Arlington', total: 78000 },
+  { _id: 'Philadelphia', total: 68000 },
+  { _id: 'San Antonio', total: 76000 },
+  { _id: 'Detroit', total: 65000 },
+  { _id: 'Las Vegas', total: 63000 },
+  { _id: 'New York', total: 50000 },
+  { _id: 'Memphis', total: 68000 },
+  { _id: 'Louisville', total: 72000 },
+  { _id: 'Tucson', total: 79000 },
+  { _id: 'Atlanta', total: 142000 },
+  { _id: 'Houston', total: 55000 },
+  { _id: 'San Diego', total: 61000 },
+  { _id: 'Los Angeles', total: 60000 },
+  { _id: 'Orlando', total: 64000 }
+  { _id: 'Austin', total: 74000 },
+  { _id: 'Miami', total: 80000 },
+  { _id: 'San Francisco', total: 75000 },
+  { _id: 'Columbus', total: 75000 },
+  { _id: 'Albuquerque', total: 78000 },
+  { _id: 'Sacramento', total: 80000 },
+  { _id: 'Boston', total: 65000 },
+  { _id: 'Chicago', total: 70000 }
+]
 Retrieve the names of employees sorted alphabetically.
+db.employee.find({},{name:1}).sort({name:1})
+[
+  { _id: 11, name: 'Alex' },
+  { _id: 2, name: 'Alice' },
+  { _id: 13, name: 'Andrew' },
+  { _id: 46, name: 'Aria' },
+  { _id: 22, name: 'Ava' },
+  { _id: 28, name: 'Avery' },
+  { _id: 31, name: 'Benjamin' },
+  { _id: 3, name: 'Bob' },
+  { _id: 35, name: 'Carter' },
+  { _id: 16, name: 'Chloe' },
+  { _id: 47, name: 'Connor' },
+  { _id: 23, name: 'Daniel' },
+  { _id: 7, name: 'David' },
+  { _id: 36, name: 'Ella' },
+  { _id: 4, name: 'Emily' },
+  { _id: 10, name: 'Emma' },
+  { _id: 19, name: 'Ethan' },
+  { _id: 48, name: 'Evelyn' },
+  { _id: 41, name: 'Gabriel' },
+  { _id: 24, name: 'Grace' }
+  { _id: 38, name: 'Hannah' },
+  { _id: 26, name: 'Harper' },
+  { _id: 33, name: 'Henry' },
+  { _id: 49, name: 'Isaac' },
+  { _id: 20, name: 'Isabella' },
+  { _id: 43, name: 'Jack' },
+  { _id: 27, name: 'Jackson' },
+  { _id: 21, name: 'James' },
+  { _id: 39, name: 'Jayden' },
+  { _id: 8, name: 'Jessica' },
+  { _id: 1, name: 'John' },
+  { _id: 9, name: 'Kevin' },
+  { _id: 40, name: 'Leah' },
+  { _id: 30, name: 'Lily' },
+  { _id: 25, name: 'Logan' },
+  { _id: 29, name: 'Lucas' },
+  { _id: 45, name: 'Luke' },
+  { _id: 44, name: 'Madison' },
+  { _id: 18, name: 'Mia' },
+  { _id: 5, name: 'Michael' }
+  { _id: 34, name: 'Nora' },
+  { _id: 12, name: 'Olivia' },
+  { _id: 17, name: 'Ryan' },
+  { _id: 6, name: 'Sarah' },
+  { _id: 50, name: 'Scarlett' },
+  { _id: 42, name: 'Sofia' },
+  { _id: 14, name: 'Sophia' },
+  { _id: 15, name: 'William' },
+  { _id: 37, name: 'Wyatt' },
+  { _id: 32, name: 'Zoe' }
+]
 Find the department with the highest number of male employees.
 Calculate the median salary of employees.
