@@ -371,7 +371,7 @@ db.employee.aggregate([{$group:{_id:"$department",avgAge:{$avg:"$age"}}}])
   { _id: 'HR', avgAge: 29.23076923076923 }
 ]
 
-Calculate the total salary expenditure for each city.
+"Calculate the total salary expenditure for each city."
 db.employee.aggregate([{$group:{_id:"$city",total:{$sum:"$salary"}}}])
 [
   { _id: 'Riverside', total: 83000 },
@@ -423,7 +423,7 @@ db.employee.aggregate([{$group:{_id:"$city",total:{$sum:"$salary"}}}])
   { _id: 'Boston', total: 65000 },
   { _id: 'Chicago', total: 70000 }
 ]
-Retrieve the names of employees sorted alphabetically.
+"Retrieve the names of employees sorted alphabetically."
 db.employee.find({},{name:1}).sort({name:1})
 [
   { _id: 11, name: 'Alex' },
@@ -477,5 +477,111 @@ db.employee.find({},{name:1}).sort({name:1})
   { _id: 37, name: 'Wyatt' },
   { _id: 32, name: 'Zoe' }
 ]
-Find the department with the highest number of male employees.
-Calculate the median salary of employees.
+
+
+"Find the department with the highest number of male employees."
+ db.employee.aggregate([{$group:{_id:{dep:"$department",genr:"$gender"},count:{$sum:1}}},{$match:{"_id.genr":"Male"}},{$sort:{count:-1}},{$limit:1}])
+[ { _id: { dep: 'IT', genr: 'Male' }, count: 13 } ]
+
+"Calculate the median salary of employees."
+
+Find the top 5 highest-paid employees.
+db.employee.find().sort({salary:-1}).limit(5)
+[
+  {
+    _id: 49,
+    name: 'Isaac',
+    age: 35,
+    gender: 'Male',
+    city: 'Bakersfield',
+    salary: 84000,
+    department: 'IT'
+  },
+  {
+    _id: 47,
+    name: 'Connor',
+    age: 34,
+    gender: 'Male',
+    city: 'Riverside',
+    salary: 83000,
+    department: 'Marketing'
+  },
+  {
+    _id: 45,
+    name: 'Luke',
+    age: 33,
+    gender: 'Male',
+    city: 'Atlanta',
+    salary: 82000,
+    department: 'IT'
+  },
+  {
+    _id: 43,
+    name: 'Jack',
+    age: 36,
+    gender: 'Male',
+    city: 'Kansas City',
+    salary: 81000,
+    department: 'Marketing'
+  },
+  {
+    _id: 7,
+    name: 'David',
+    age: 40,
+    gender: 'Male',
+    city: 'Miami',
+    salary: 80000,
+    department: 'Marketing'
+  }
+]
+
+"Determine the distribution of employees' ages (e.g., number of employees in each age group: 20-30, 30-40, etc.)."
+db.employee.aggregate([{$project: {ageGroup: {$concat: [{ $toString: { $subtract: [{ $mod: ["$age", 10] }, "$age"] } },"-",{ $toString: { $add: [{ $subtract: [{ $mod: ["$age", 10] }, "$age"] }, 9] } }]}}},{$group: {_id: "$ageGroup",count: { $sum: 1 }}},{ $sort: { "_id": 1 } }])
+[
+  { _id: '-20--11', count: 15 },
+  { _id: '-30--21', count: 34 },
+  { _id: '-40--31', count: 1 }
+]
+
+"Calculate the standard deviation of salaries."
+
+"Find the department with the highest total salary expenditure."
+
+" Retrieve the names of employees who have the same salary. "
+db.employee.aggregate([  { $group: { _id: "$salary", names: { $push: "$name" } } }])
+[
+  { _id: 58000, names: [ 'Jessica' ] },
+  { _id: 83000, names: [ 'Connor' ] },
+  { _id: 82000, names: [ 'Luke' ] },
+  { _id: 84000, names: [ 'Isaac' ] },
+  { _id: 55000, names: [ 'Emily' ] },
+  { _id: 70000, names: [ 'Bob', 'Kevin', 'Nora' ] },
+  { _id: 67000, names: [ 'Emma', 'Avery' ] },
+  { _id: 69000, names: [ 'Ryan', 'Zoe' ] },
+  { _id: 50000, names: [ 'John' ] },
+  { _id: 75000, names: [ 'Michael', 'Benjamin', 'Madison' ] },
+  { _id: 81000, names: [ 'Jack' ] },
+  { _id: 74000, names: [ 'William', 'Jackson', 'Henry', 'Sofia' ] },
+  { _id: 64000, names: [ 'Ava' ] },
+  { _id: 78000, names: [ 'Wyatt', 'Scarlett' ] },
+  { _id: 77000, names: [ 'Evelyn' ] },
+  { _id: 65000, names: [ 'Sarah', 'Grace' ] },
+  { _id: 72000, names: [ 'Alex', 'Logan', 'Hannah' ] },
+  { _id: 63000, names: [ 'Isabella' ] },
+  { _id: 80000, names: [ 'David', 'Gabriel' ] },
+  { _id: 79000, names: [ 'Jayden' ] }
+  { _id: 73000, names: [ 'Daniel', 'Lucas', 'Leah' ] },
+  { _id: 60000, names: [ 'Alice', 'Sophia' ] },
+  { _id: 62000, names: [ 'Mia' ] },
+  { _id: 59000, names: [ 'Olivia' ] },
+  { _id: 68000, names: [ 'Andrew', 'Lily' ] },
+  { _id: 76000, names: [ 'Ethan', 'Carter', 'Aria' ] },
+  { _id: 66000, names: [ 'Harper' ] },
+  { _id: 61000, names: [ 'Chloe' ] },
+  { _id: 71000, names: [ 'James', 'Ella' ] }
+]
+Find the department with the highest average age of employees.
+
+Calculate the difference in average salary between male and female employees.
+Find the employees with the highest and lowest salaries in each department.
+Determine the 25th percentile salary of employees.
