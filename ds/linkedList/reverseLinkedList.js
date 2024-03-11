@@ -58,6 +58,21 @@ class LL{
         }
         console.log(listItem.join('->'));
     }
+    search(value){
+        if(this.isEmpty()){
+            return null
+        }else{
+            let curr=this.head
+            while(curr){
+                if(curr.value===value){
+                    return true
+                }
+                curr=curr.next
+            }
+            return false
+        }
+    }
+    
 }
 
 
