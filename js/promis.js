@@ -1,6 +1,7 @@
 let pro=new Promise((resolve,reject)=>{
-    let mark=Math.round(Math.random()*100)
-    if(mark<24){
-        reject(`exam failed ${mark}`)
-    }else resolve(`success passed in your exam ${mark}`)
-}).then((res)=>console.log(res)).catch((err)=>console.log(err))
+    let practical=Math.round(Math.random()*10)
+    let teory=Math.round(Math.random()*10)
+    if(practical<5&&teory<5){
+        reject(`review falid p: ${practical} t: ${teory}`)
+    }else if(practical>5&&teory>5) resolve(`success passed in your exam p: ${practical} t: ${teory}`)
+}).then((res)=>console.log(`suuuui ${res}`)).catch((err)=>console.log(err)).finally(()=>console.log('completed'))
