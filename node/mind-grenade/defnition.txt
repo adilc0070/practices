@@ -1,0 +1,2 @@
+it means the utils/function module nothing exported but it accessedthe ming file in the functions module invoked function is reternd the output 
+the module is not return the value but it "console.log" is displays 

@@ -1,0 +1,5 @@
+REPL is means Read Evaluate Print Loop
+using to work JS in terminals every were 
+befor installation the teminal converting into simple files running is used for that
+after terminal open 'node js_fileName' in this time it open that file 
+the file accessing time extention is not compelsory  

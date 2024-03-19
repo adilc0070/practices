@@ -1,0 +1,19 @@
+it means it the developer created own module for using ther own progects 
+
+
+//first created a names file 
+the names file exported there variables into module side the module importing time it use any were in progams 
+the names a not same that time it share like object
+
+
+// second created a functions file 
+the functions file "utils.js" is created a function for saygood morning 
+the function accept parammiter that 'name' it access form the inving time 
+
+
+//create a function and name file accessing file 
+this file import the names module and functions module seperetly 
+the function module accessed variable is invoke the function the arguments passes the names module accessed variable
+it send the names individually 
+
+

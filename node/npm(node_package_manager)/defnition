@@ -1,0 +1,17 @@
+node package manager is installed with node installation time 
+it used for importing some modules from externally 
+ this modules are reuseble ,any one want share the progect that resiving person deosn't have modules 
+that time it instal with this command 'npm install'
+    'npm'
+
+    'npm --v or --version'
+    'npm i or install <packagename>'
+    'npm i or install -g <packagename>'
+    
+    share code means that code do not share the node module 
+    at the time it install with 'npm intall'
+
+this command check json/json lock files and check the deppendency and install all deppendences
+
+
+    // "start": "nodemon",

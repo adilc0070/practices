@@ -585,3 +585,22 @@ Find the department with the highest average age of employees.
 Calculate the difference in average salary between male and female employees.
 Find the employees with the highest and lowest salaries in each department.
 Determine the 25th percentile salary of employees.
+
+
+Name Starts with "k":
+db.collection.find({ "name": { $regex: /^k/ } })
+
+Name Ends with "k":
+db.collection.find({ "name": { $regex: /k$/ } })
+
+Name Contains "k" in the Middle:
+db.collection.find({ "name": { $regex: /k/ } })
+
+Name Starts with "k" or Contains "k" in the Middle:
+db.collection.find({ "name": { $regex: /^k|k/ } })
+
+Name Contains "k" at the End or in the Middle:
+db.collection.find({ "name": { $regex: /k$/ } })
+
+Name Starts and Ends with "k" (Exact Match):
+db.collection.find({ "name": { $regex: /^k$/ } })

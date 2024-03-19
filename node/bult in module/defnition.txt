@@ -1,0 +1,15 @@
+it is node installation time it istalled 
+the using is import the modules and use the proppertys of module 
+
+the bultin module are 
+os module= is used for identify the os details 
+path module=is used to create a path or exixting path making 
+in the pathmodule file is created
+
+Fs module=
+is used to create or read an existing files and edit the files that type of uses 
+in thes modules have two types 
+    one is syncrones = it similer to js working it worked line by line 
+        eg:- readfilesync
+    
+    second is asyncroness= first work the main content of the page then the callback function is work 

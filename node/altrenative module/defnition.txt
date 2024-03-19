@@ -1,0 +1,3 @@
+it means the utils/functions file individually exporting ther modules or functions that means altrenative modules
+in the functions file 2 functions not used the "module" keyword it is exported but it a unethical way 
+'module' keyword is used exports is ethical way

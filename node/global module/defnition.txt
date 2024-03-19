@@ -1,0 +1,21 @@
+the node installation time it install automatically 
+//    main modules are 
+
+require()
+    it used to import modules 
+
+console.log()
+    using to display in console 
+
+setTimeout()
+setInterval()
+setImmediate()
+    its using to time related work access 
+
+__dirname()
+    file path access without filename.extention
+
+__filename()
+    file located path access filename.extention is include
+
+
