@@ -5,9 +5,9 @@ let writeFilePromise=util.promisify(writeFile)
 
 let start=async()=>{
     try{
-        let first=await readFilePromise('promisfy/files/first.txt','utf8')
-        let second=await getText('promisfy/files/second.txt')
-        await writeFilePromise('promisfy/files/result.txt',first+second)
+        let first=await readFilePromise('node/promisfy/files/first.txt','utf8')
+        let second=await getText('node/promisfy/files/second.txt')
+        await writeFilePromise('node/promisfy/files/result.txt',first+second)
         console.log(first,'\n',second);
     }
     catch(error){

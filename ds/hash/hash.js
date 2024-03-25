@@ -96,5 +96,6 @@ hash.set("age",10)
 col.set("ega","10")
 // hash.set("ega","10")
 
+
 hash.display()
 col.display()
