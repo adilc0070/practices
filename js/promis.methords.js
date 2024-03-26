@@ -14,6 +14,6 @@ let pr3=new Promise((resolve,reject)=>{
     else resolve(`success passed from 3 ${mark}`)
 })
 
-let promisall=Promise.all([pr1,pr2,pr3])
+let promisall=Promise.allSettled([pr1,pr2,pr3])
 
-promisall.then((res)=>console.log(`success ${res}`)).catch((err)=>console.log(`failed ${err}`))
+promisall.then((res)=>console.log(res)).catch((err)=>console.log(err))
