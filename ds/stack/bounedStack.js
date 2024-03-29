@@ -16,7 +16,7 @@ class Stack {
         if (!this.overFlow()) {
             this.items.push(value);
         } else {
-            console.log("Stack is full");
+            console.log("Stack is full",value,'not inserted');
         }
     }
 
@@ -46,23 +46,7 @@ stack.push(18+2)
 stack.push(18+3)
 stack.push(18+4)
 stack.push(18+5)
-// stack.push(18+6)
-stack.pop()
-stack.pop(push(value) {
-    if (!this.overFlow()) {
-        this.items.push(value);
-    } else {
-        console.log("Stack is full");
-    }
-}
-
-pop() {
-    if (!this.underFlow()) {
-        return this.items.pop();
-    } else {
-        console.log('Stack underflow');
-        // Return undefined or throw an error
-        // depending on how you want to handle underflow.
-    }
-})
+stack.push(18+6)
+// stack.pop()
+// stack.pop()
 stack.print()
