@@ -1,0 +1,1132 @@
+pure component (in this case, a pure function that returns a React component that renders the same output every time it is called with the same input)
+
+list & keys (a key is a unique value for each list item that is used to identified, update or remove an item by React)
+
+diffing algorithm (a diffing algorithm that compares two trees and returns the minimal set of operations needed to transform the first tree into the second tree, virtual DOM)
+
+react app performance (if we want to improve the performance of our React app, we can use some techniques like code splitting, lazy loading, and memoization to improve the performance of our app, which can be done by using the following techniques: useCallback and useMemo hooks) 
+
+custom hook (a custom hook is a function that allows you to reuse state and other React features in your component without writing a class or extending React.Component)
+
+send the data from child to parent 
+    (useEffect vs useLayoutEffect
+    useLayoutEffect : it runs after the DOM is rendered, but before the component is rendered in the browser. It is used for running side effects in React.
+    useEffect : it runs after the DOM is rendered and before the component is rendered in the browser. It is used for running side effects in React.
+    )
+drawbacks of CSR (Client Side Rendering the main drawbacks are : initial loading is slow, server side rendering is slow, it is not SEO friendly, it is not user friendly)
+
+drawbacks of useMemo and React.memo in a simpler form:
+    (
+        Complexity: Using these features can make your code harder to understand.
+        Memory Usage: They might use more memory, especially if memoized values are large.
+        False Positives: They might unnecessarily store values, wasting memory.
+        Performance Issues: In some cases, they could slow down your app instead of speeding it up.
+        Compatibility: They work best with certain types of data and functions.
+        Debugging Difficulty: Finding and fixing issues related to memoization can be tricky.
+        Maintenance: As your app changes, you might need to adjust your memoization, which can take time and effort.
+    )
+
+useMemo:
+    Purpose: It's like a memory saver for functions. It remembers the result of a function so that if you call it again with the same inputs, it gives you the remembered result instead of recalculating.
+    Limitations:
+    It might not always remember everything perfectly.
+    It may not always keep things neat and tidy, especially if the function has side effects.
+React.memo:
+    Purpose: It's like a speed booster for components. It remembers how a component renders based on its props, so if the props don't change, it doesn't re-render the component.
+    Limitations:
+    It might miss some things while remembering, especially if the component isn't pure.
+    It might not always catch all changes if the component has side effects.
+
+react portals ( React Portal is a feature that allows you to render a React component tree outside the DOM hierarchy of the parent component. In other words, it lets you render elements at a different place in the DOM tree from where the parent component is rendered.)
+
+role based authorization (
+    Authentication is the process of verifying the identity of a user. It answers the question, "Who are you?" Common methods of authentication include username/password authentication, biometric authentication, OAuth, etc. Once a user is authenticated, they are given a token or session that identifies them within the system.
+    Authorization, on the other hand, is the process of determining what actions or resources a user is allowed to access after they have been authenticated. It answers the question, "What are you allowed to do?" Authorization is typically based on the user's identity and their associated permissions or roles. Role-based authorization is one approach to managing authorization, where access control decisions are based on the roles assigned to users.
+    )
+
+recurise function to print multiples of a given number (')
+event loop & code execution
+    (
+        event loop is the process of executing JavaScript code in a single thread. It is a mechanism that allows JavaScript code to be scheduled and executed in the order that it was written.
+        code execution is the process of executing JavaScript code in a single thread. It is a mechanism that allows JavaScript code to be scheduled and executed in the order that it was written.
+    )
+find the longest word in a string
+    ()
+aggregate queries involving multiple stages
+user agent
+express.json & urlencoded
+query param & path params - usecases
+identifiers
+continue
+event loop
+JSON methods
+default parameters
+local storage vs session storage
+object methods
+util module
+OPTIONS
+threads
+error first callback
+$all
+Journaling
+$addToSet
+$expr
+pure components
+core principles of Redux
+principles of REST
+peek
+types of hash functions
+degree of a node
+
+
+IIFE syntax
+generator function practical
+Weakset
+Weakmap
+Object.seal
+prototype pollution
+Proxy object
+constructor function
+function composition
+nullish operator
+Promise.race vs Promise.any
+flatMap
+
+threadpool
+event driven programming
+spawn vs fork
+exec
+execFile
+app.locals
+Rate limiting
+content negotiation
+OPTIONS method
+EventEmitter
+
+axios cancelToken
+react.memo
+dynamic import
+useLayoutEffect
+Shadow DOM
+HTML sanitization
+native events
+transpiler
+deadcode elimination
+
+Hashed indexing
+TTL index
+database profiler
+covered query
+clustered collection
+$merge
+$facet
+$elemMatch
+$addToSet
+single purpose aggregation
+$pullAll
+$out
+Aggregate practicsls
+
+segment tree
+double hashing
+load factor
+monotonic stack
+Serialize a binary tree
+Tarjan’s algorithm
+double ended queue
+linear probing
+quadratic probing
+Open addressing
+Separate Chaining
+suffix tree
+Red-Black Tree
+AVL tree
+Sparse array
+Jagged array
+Divide and conquer technique
+STRUCTURED CLONE
+DEEP CLONING IN JS
+PROXY OBJECT
+OBJECT PROTOTYPES
+DEBOUNCING
+THROTTLING
+WEAKSET
+WEAKMAP
+DRAWBACKS OF CLOSURE
+
+REACT LATEST FEATURES
+TRANSPILER VS COMPILER
+PURE COMPONENTS
+PROP TYPES
+ERROR BOUNDARY
+AUTOMATIC BATCHING
+AXIOS CANCEL TOKEN
+REACT CONCURRENT
+FUNCTION VS CUSTOM HOOK
+
+REST PRINCIPLES
+RATE LIMITING
+
+PROMISE.RACE VS PROMISE.ANY VS PROMISE.ALL VS PROMISE.SETTLED
+
+INDEXING
+SPANNING TREE
+COVERED QUERY
+HOW DOES GRIDFS WORK ?
+
+PROTOTYPE
+EVENT CAPTURING 
+REST API
+VIEW ENGINE COMPARISONS
+CUSTOM MIDDLEWARES
+EXEC()
+SQL VS NOSQL
+$IN
+REACT ROUTER DOM V4,5 AND 6
+STACK AND QUEUE
+APPLICATIONS OF QUEUE
+APPLICATIONS OF BST
+BST VALIDATION
+
+ARROW FUNCTION VS REGULAR FUNCTION(THIS)
+SHALLOW COPY AND DEEP COPY
+EVENT DELEGATION
+PROTOTYPAL INHERITANCE
+
+FORK()
+SPAWN()
+CLUSTERS
+
+REQ.QUERY
+REQ.PARAMS
+DYNAMIC ROUTE
+SINGLE PURPOSE AGGR
+CAPPED COLLECTION
+
+USES OF BOM
+THIS IN ARROW FUNCTION
+ESCAPE SEQUENCE
+OBJECT.FREEZE,
+OBJECT.SEAL
+GENERATOR FUNCTION
+FACTORY FUNCTION
+APPLICATIONS AND DRAWBACKS OF CLOSURE
+
+VIEWS
+$LOOKUP
+$POP AND $PULL
+NODE CONCURRENCY
+PROCESS VS THREAD
+APPLICATION MIDDLEWARE VS ROUTER MIDDLEWARE
+PUT VS PATCH
+HTTP REQUEST STRUCTURE
+PATH VS QUERY PARAMS
+CORS POLICY
+CONTENT NEGOTIATION
+PREFLIGHT REQUEST 
+
+NODE/EXPRESS JS
+NET IN NODE
+LEAN()
+SOCKET
+STREAM
+3 LAYER ON NODE
+
+BREADCRUMBS JS
+RECURSIVE
+
+FACTORIAL FUNCTION
+
+INTERNALIZATION
+Scaffolding
+UTIL MODULE
+PROMISIFY
+flatMap 
+Hashmap 
+Identifier
+Generator function
+Factory function
+Throw
+Thread
+Constructor
+Default constructor 
+Class
+Singleton class
+Object
+Implicit type convertion 
+Event bubbling
+Promise.all
+Query and params
+Res.sent and res.write
+Transaction
+Cron job
+Embedded document
+Views
+Types of indexing
+Profiler
+Render props
+Quadratic probing
+Load factor
+Spanning tree
+Minimum spanning tree
+super keyword
+
+"Pending
+
+Literals
+Implicit type convertion
+Bitways oparetor
+Ternary oparetor
+Use strict
+Event bubbling
+Event driven architecture
+Throttling
+
+Query and params
+Transaction
+Cronjob
+Pagination
+Cluster and workers
+
+Views
+Partition tolarence
+TTL indexing
+Bulk write
+Shard key
+Unset
+
+Error boundary
+Redux persistence
+Time travel 
+
+load factor
+Stack principal in recursion
+Suffix tree
+Spanning tree
+Minimum spanning tree
+Heap used to manage priority queue
+Left element in heap
+Right element in heap
+Parent element in heap
+Recursion complexity
+Graph representation
+Graph indexing
+Dijistras algorithm
+Disconnected graph
+Bfs complexity
+DFS
+
+javaScript promise
+Hoisting
+browser api, BOM
+cluster in Node js
+Thread pool
+Read more about useReducer, React.memo
+data structure
+searching, sorting, linklist, stack problems
+
+DOM manipulation methods
+Identifiers
+Type casting
+Implicit/explicit type casting
+JSON
+Examples for HOF
+Map vs forEach
+Object methods
+Local storage vs session storage
+WebAPIs
+First class functions
+Core modules in node.js
+Http
+OPTIONS
+Trasform streams
+fs.unlink()
+Process 
+Threads
+Fork()
+Spawn()
+$all
+$addToSet
+Journaling
+Pure components
+Core principles of Redux
+Synthetic events
+REST
+Principles of REST
+Disadvantages of recursion
+Big-O
+Applications of doubly LL
+Underflow in stack
+Balanced tree
+
+heap used to manage priority queue
+graph indexing
+complexity of recursion
+minimum spanning tree
+
+file response
+conditional rendering
+
+literals
+proxy object
+
+JS
+
+Event delrgation
+Weakset
+Weakmap
+Proxy object
+function composition
+prototype pollution
+nullish operator
+Promise.race vs Promise.any
+
+Node, express
+
+types of streams
+Buffer class
+process.nextTick
+event driven programming
+spawn vs fork
+exec
+execFile
+express.json
+app.locals
+partials 
+app.all
+Rate limiting
+content negotiation
+OPTIONS method
+
+Mongodb
+
+Hashed indexes
+TTL index
+BSON advantage
+database profiler
+covered query
+$facet
+$expr
+$elemMatch
+$addToSet
+journaling
+update practicals
+
+React
+
+debouncing
+throttling
+Axios interceptors
+Axios cancelToken
+deadcode elimination
+polyfills
+
+Generator function syntax
+Function borrowing
+Pure functions
+Reduce function for finding largest in an array
+instanceOf
+Hooks, custom hooks
+useMemo dependency
+Proptypes
+Renderprops
+HOC - need clarity
+Suspense
+Concurrency in nodejs
+Res.render
+Bson
+Timestamp
+Divide and conquer technique
+Head in linkedlist
+Applications of weighted graphs
+Backtracking
+Complete binary tree
+
+cookie vs cache
+CSRF
+Buffer class in node js
+Concept of memory leaks in node js
+
+Redux vs flux
+react profiler
+controlled vs uncontrolled component
+
+router chaining
+pipe
+
+palidrome
+linkedlist reverse
+occurance in BST
+"Pendings:
+deep freeze and shallow freeze
+function composition vs curring
+promise.reject
+
+write head
+ip packet
+clustering 
+net module
+http compression
+content-security-policy
+
+levels in isolation
+retryable writes
+query routing
+bucketing
+manual election in rs $cond
+$merge vs $out
+$in
+add two subject to course of students 2
+
+useMemo
+shadow dom
+dangerouslySetInnerHTML
+ReactDomCleint
+ReactDomServer
+rules of using hooks
+
+circular linked list
+weighted graph
+bounded queues
+monotonic stack
+monotonic queu
+linear probing
+quadratic probing
+resize a hash table?
+degenerate tree
+perfect tree
+
+write a function to find the extra letter added to the string
+write a function to check if a linked list is palindrome
+write a function which takes an sentence and converts it to an array of words
+hashtable resize
+Pendings:
+Node:
+-Difference between promise and observables 
+-setImmediate 
+-process.nexttick 
+-learn how to convert callback hell code into async await or promise 
+-difference between spawn and fork 
+
+
+react.js:
+-useMamo
+-useCallback 
+-Write code to update value in store 
+-middleware 
+
+Mongodb:
+-$elemMatch 
+-write a query to get all the users with their orders, if user have no order than add 0 order or empty array 
+
+Ds:
+-Time complexity of quick sort 
+-Apply binary search on [9,7,6,4,1-1]
+-Find how many times each character is repeating in "hello"
+Output should be {h : 1, e : 1 , l : 2, o : 1}
+-quick sort program 
+-flat the array [6,7,[5,[7],0]]
+Review postponed:15-03-24
+Reason: Task not completed 
+Next review: 22-03-24
+
+Pendings
+
+JS
+- latest ECMAScript 
+- is null an object?
+- multiple tasks parallel
+- Set vs WeakSet
+- Symbol
+- eval()
+- pure functions: need clarity
+- Proxy object
+- creating private scope in ES6 without IIFE
+- labels 
+- JIT
+- print current time
+- unix timestamp 
+- usage of .reduce()
+- remove object keys that being with a vowel
+Score: 4
+
+DB
+- namespace
+- WiredTiger
+- BSON additional datatypes
+- fulltext search
+- covered query
+- $redact
+- how is uniqueness of ObjectId guaranteed 
+- $exists: documents that don’t have a field 
+- $size: fruits with more than two colors
+- reduce price of all fruits by 20%
+- rename a field
+Score: 3
+
+React
+- class vs className in JSX
+- storing value in variables vs useRef
+- why shouldn’t hooks be in conditionals 
+- preventing re-render of child components
+- pure components
+- compilation vs transpilation
+- navigation without changing url
+- types of routers
+- getting query params in react app
+- purpose of spreading when updating state
+- setting up a reducer
+- copying text to clipboard
+Score: 3.5
+
+DSA
+- stack underflow
+- UTF-8
+- LF, CRLF
+- escape sequence
+- benefits tail recursion
+- sparse array
+- heterogeneous array
+- rehashing
+- DFS ensuring a node is visited only once
+- group anagrams into subarrays (partially done)
+Score: 4.5
+
+Backend
+- CommonJS
+- fs operations 
+- worker threads
+- child process
+- concurrency 
+- default port of HTTP, HTTPS 
+- privileged ports
+- socket
+- npm start vs pm2
+- viewing logs after deployment 
+- SSH
+- reverse proxying
+- DNS
+- express.urlencoded
+- cookie headers, removing cookies
+- browser cache
+- error handling middleware args
+- accessing query params
+- path params
+- HTTP 403
+- JWT claims 
+- how does JWT prevent forgery
+Score: 2.5
+
+Theory 3.5
+Pendings
+
+- ECMAScript 
+- Weak Set
+- Symbol
+- Object.seal vs Object.freeze
+- typed array
+- activating strict mode
+- eval 
+- Proxy object
+- class: method syntax
+- .reduce(): longest string in array
+- 6 digit random OTP
+
+- adjacency matrix
+- weighted graph
+- undirected graph
+- load factor 
+- ASCII vs UNICODE
+- circular reference 
+- sparse array
+- stack implementation
+
+- $out
+- TTL index
+- backup and restore
+- atomicity
+- priciest Green fruit
+- decrease price of all fruits by 0.5
+- unique colors (color is an array field)
+
+- CommonJS
+- fork() vs spawn()
+- event emitter
+- query params vs path params 
+- accessing query params in middleware
+- preflight request, HTTP OPTIONS
+- CSRF
+- DNS
+- reverse proxying
+- rate limiting 
+- default port of HTTP and HTTPS
+- SSH
+- JWT structure
+
+- reconciliation
+- react fiber
+- use cases for useRef
+- Suspense 
+- types of router
+- useSelector 
+- why doesn’t react let you use hooks in conditional statements?
+- synthetic events
+adv of functional over class based components
+useEffect
+props drilling
+custom hook
+key
+"Pendings
+
+Improve the communication
+Promise.any
+Event deligation
+Event propagation
+BOM methods
+Ajax 
+jQuery
+Thread pool
+Transform streams
+Preflight request
+Query and params
+SQL vs NoSQL 
+Journaling
+Normal forms
+Redux
+React flux
+Insertion sort
+Binary search
+Stack vs queue
+Graph vs tree
+Loops vs cycles
+Trie insertion 
+Recursion 
+
+Javascript: 6, 5
+Nodejs: 7, 6.5
+Mongodb: 7, 5
+React: 7, 6.5
+Data structure: 6.5, 6
+Theory 6
+Practical 6"
+Pendings:
+primitive vs non primitive
+callback function
+async/await
+map/filter/reduce
+Object methods
+
+cluster module
+fork()
+spawn()
+process.nextTick
+setimmediate
+
+sharding - lacks clarity
+gridFs
+$expr
+$elemMatch
+$addToSet
+
+custom hook - understand better
+profiling
+lazy load
+suspense
+JS : 5.5
+Node JS : 5
+mongo DB : 5
+React : 5
+DS : 6
+Theory:6
+Coding:5
+DOM manipulation, check/uncheck a checkbox 
+in a button click - not known, prevent right click of 
+ckeckbox - not done, primitive vs non-primitive data 
+types - learn more, event propagation - understand 
+better, escape sequence, weak set, middleware to log 
+all request's url and method, how to clear local 
+storage, idempotency, upsert query, query to find 
+lowest aged student in science department, Spop vs 
+$pull, virtual DOM vs shadow DOM, forward ref, react 
+concurrent mode, optimizing react application - learn 
+more, implementation of custom hook, degree of a tree, 
+spanning tree - understand better, how to find the 
+number of cycles in a graph - not known, applications 
+of heap and hash table, complexity of heap sort, 
+advantages of recursion.
+
+continue
+what is promise microtask is macrotask queue implicit / explicit type casting
+JSON
+ISON methods default parameters
+local storage vs session storage
+REPL
+OPTIONS
+streams in node js process threads
+Libur router chaining
+CAP theorem
+embedded documents
+Journaling
+asymptotic notations applications of doubly LL
+load factor
+degree of a node balanced tree
+minimum spanning tree primary key vs unique key entities
+Theory : 3
+Coding: 3
+Pending:
+DOM manipulation, event handling, event propagation, upsert query: average query, query to find lowest priced product name in group 1, rawbacks of indexing, middleware to log all request url and method, http request structure, content negotiation, dynamic routing, http options - not clear, rest api, cors policy - understand better, how nodejs handles concurrency.
+
+project:
+no proper validations hash the password
+DOM
+states in promise examples for HOF type casting
+JSON
+JSON methods
+CORS upsert
+types of indexing theory 5
+code 3
+paid 1000rs fine nullish operator bitwise operator function composition hoisting in arrow function weekset week Map hoisting in let
+cron-job dynamic routing router chaining
+transaction batch sting
+111
+query routing elematch vs all
+
+isArray
+- diray empty
+- prototype
+- call vs bind
+- Object.seal vs Object freeze
+- object empty
+- stream
+- CORS
+- http Options
+- express.json()
+- app.allO
+- sharding
+- replication
+- Sexpr
+- Slookup
+- max size of mongo doc
+- single purpose aggr.
+
+
+[6:39 am, 13/03/2024] Nishad Ali: What is the difference between null and undefined?
+Explain the concept of hoisting in JavaScript.
+What are closures in JavaScript? Can you provide an example?
+How does prototypal inheritance work in JavaScript?
+What is event bubbling and event capturing in JavaScript?
+How do you handle asynchronous operations in JavaScript?
+What are the different ways to create objects in JavaScript? Can you compare them?
+Explain the difference between == and === in JavaScript.
+What is the use of this keyword in JavaScript?
+How does the event loop work in JavaScript?
+What are the new features introduced in ES6 (ECMAScript 2015)?
+Explain the concept of promises in JavaScript and how they differ from callbacks.
+What are arrow functions in JavaScript? How do they differ from regular functions?
+How can you prevent code injection attacks in JavaScript?
+What are the benefits of using strict mode in JavaScript?
+What are some common design patterns used in JavaScript?
+How would you optimize the performance of a JavaScript application?
+What are the differences between function declarations and function expressions in JavaScript?
+Explain the concept of scope and lexical scope in JavaScript.
+How can you debug JavaScript code effectively?
+[6:41 am, 13/03/2024] Nishad Ali: What is the output of typeof [] in JavaScript?
+Write a function to check if a given string is a palindrome.
+Explain the concept of event delegation in JavaScript.
+Implement a function to reverse a linked list.
+What is a closure and how is it used in JavaScript?
+Write a function to find the factorial of a given number.
+Explain the differences between let, const, and var in JavaScript.
+Implement a function to flatten a nested array.
+What is the purpose of the use strict directive in JavaScript?
+Write a function to find the nth Fibonacci number.
+What is the difference between null and undefined in JavaScript?
+Implement a function to find the maximum number in an array.
+Explain the concept of prototypal inheritance in JavaScript.
+Write a function to remove duplicates from an array.
+What is the difference between synchronous and asynchronous code execution in JavaScript?
+Implement a function to check if two strings are anagrams of each other.
+Explain the concept of promises in JavaScript and how they handle asynchronous operations.
+Write a function to check if a given number is prime.
+How do you handle errors in JavaScript?
+Implement a function to perform a binary search on a sorted array.
+Explain the concept of lexical scoping in JavaScript.
+Write a function to find the longest word in a sentence.
+What are higher-order functions in JavaScript? Provide an example.
+Implement a function to find the intersection of two arrays.
+Explain the difference between == and === in JavaScript.
+Write a function to generate a random hexadecimal color code.
+What is a callback function in JavaScript? Provide an example.
+Implement a function to check if a given year is a leap year.
+Explain the concept of currying in JavaScript.
+Write a function to remove falsy values from an array.
+What are the advantages of using arrow functions in JavaScript?
+Implement a function to reverse the order of words in a sentence.
+Explain the difference between call, apply, and bind methods in JavaScript.
+Write a function to count the number of occurrences of a given character in a string.
+What are the new features introduced in ES6 (ECMAScript 2015)?
+Implement a function to shuffle an array.
+Explain the concept of memoization and how it can be used to optimize recursive functions.
+Write a function to check if a given string is a valid palindrome.
+What are the different ways to create objects in JavaScript? Compare them.
+Implement a function to check if a given string contains only unique characters.
+Explain the concept of event bubbling and event capturing in JavaScript.
+Write a function to check if a given number is even or odd without using modulo operator.
+What are the benefits of using strict mode in JavaScript?
+Implement a function to convert a decimal number to binary.
+Explain the concept of scope chaining in JavaScript.
+Write a function to find the missing number in an array of integers.
+What are the differences between function declarations and function expressions in JavaScript?
+Implement a function to check if a given string is a valid email address.
+Explain the concept of object destructuring in JavaScript.
+Write a function to find the intersection of multiple arrays.
+[6:41 am, 13/03/2024] Nishad Ali: Certainly! Here are the next 50 JavaScript interview questions and programming problems:
+
+51. What is the difference between setTimeout and setInterval functions in JavaScript?
+52. Write a function to remove all vowels from a given string.
+53. Explain the concept of the event loop in JavaScript.
+54. Implement a function to check if a given array is sorted in non-decreasing order.
+55. What are the advantages of using ES6 classes over prototype-based inheritance?
+56. Write a function to capitalize the first letter of each word in a sentence.
+57. Explain the difference between splice() and slice() methods in JavaScript arrays.
+58. Implement a function to find the longest substring without repeating characters.
+59. What is a promise chain in JavaScript? Provide an example.
+60. Write a function to find the intersection of two linked lists.
+61. Explain the concept of a generator function in JavaScript.
+62. Implement a function to check if a given string is a valid URL.
+63. What are the benefits of using the map() method in JavaScript arrays?
+64. Write a function to check if a given number is a perfect square.
+65. Explain the concept of memoization and provide an example of how it can be implemented.
+66. Implement a function to perform a deep copy of an object.
+67. What are the different ways to handle asynchronous code in JavaScript?
+68. Write a function to reverse words in a sentence without reversing the order of words.
+69. Explain the concept of a callback hell and how to avoid it.
+70. Implement a function to find the longest common prefix among an array of strings.
+71. What are rest parameters in JavaScript? Provide an example.
+72. Write a function to check if a given string contains balanced parentheses.
+73. Explain the purpose of the Symbol data type introduced in ES6.
+74. Implement a function to check if a given string is a valid palindrome ignoring non-alphanumeric characters.
+75. What are the differences between ==, ===, Object.is() in JavaScript?
+76. Write a function to merge two sorted arrays into a single sorted array.
+77. Explain the concept of currying and provide an example.
+78. Implement a function to remove all duplicate characters from a string.
+79. What are the differences between Object.freeze() and const in JavaScript?
+80. Write a function to find the first non-repeating character in a string.
+81. Explain the purpose of the WeakMap and WeakSet data structures in JavaScript.
+82. Implement a function to convert a binary number to decimal.
+83. What are the differences between forEach(), map(), filter(), and reduce() methods in JavaScript arrays?
+84. Write a function to check if a given string is an anagram of another string.
+85. Explain the concept of the spread operator (...) in JavaScript.
+86. Implement a function to check if a given string is a valid IPv4 address.
+87. What are the differences between Object.keys(), Object.values(), and Object.entries() methods in JavaScript?
+88. Write a function to find the median of two sorted arrays.
+89. Explain the purpose of the Proxy object in JavaScript.
+90. Implement a function to rotate an array to the right by a given number of steps.
+91. What are the differences between find() and findIndex() methods in JavaScript arrays?
+92. Write a function to check if a given string is a valid palindrome considering only alphanumeric characters and ignoring cases.
+93. Explain the concept of memoization and provide an example.
+94. Implement a function to perform a shallow copy of an array.
+95. What are the differences between Object.assign() and spread operator (...) for object copying in JavaScript?
+96. Write a function to convert a decimal number to Roman numerals.
+97. Explain the concept of the event delegation and its advantages.
+98. Implement a function to find the maximum subarray sum in a given array.
+99. What are the differences between setTimeout() and requestAnimationFrame() for animation in JavaScript?
+100. Write a function to check if a given string is a valid IPv6 address.
+
+These questions cover a wide range of topics in JavaScript and should help in assessing the proficiency of candidates in the language.
+[6:42 am, 13/03/2024] Nishad Ali: Of course! Here are the next 50 JavaScript interview questions and programming problems:
+
+101. What are the differences between localStorage and sessionStorage in HTML5?
+102. Write a function to find the factorial of a large number efficiently.
+103. Explain the concept of the prototype chain in JavaScript inheritance.
+104. Implement a function to find the longest increasing subsequence in an array.
+105. What are the differences between function declarations and function expressions in JavaScript?
+106. Write a function to check if a given string is a valid palindrome using recursion.
+107. Explain the difference between synchronous and asynchronous JavaScript.
+108. Implement a function to check if a given string is a valid JSON.
+109. What is a generator in JavaScript and how does it differ from a regular function?
+110. Write a function to find the first recurring character in a string.
+111. Explain the purpose of the WeakMap and WeakSet data structures in JavaScript.
+112. Implement a function to find the longest common substring between two strings.
+113. What is the difference between a shallow copy and a deep copy of an object?
+114. Write a function to generate all possible combinations of a given string.
+115. Explain the difference between null, undefined, and NaN in JavaScript.
+116. Implement a function to reverse words in a sentence while maintaining the order of words.
+117. What is memoization and how does it optimize recursive functions?
+118. Write a function to check if a given number is a power of two.
+119. Explain the purpose of the finally block in JavaScript try...catch statements.
+120. Implement a function to find the longest palindromic substring in a given string.
+121. What is the event loop in JavaScript and how does it work?
+122. Write a function to merge overlapping intervals.
+123. Explain the difference between synchronous and asynchronous JavaScript.
+124. Implement a function to check if a given string is a valid parenthesis sequence.
+125. What are the differences between localStorage and sessionStorage in HTML5?
+126. Write a function to find the kth largest element in an unsorted array.
+127. Explain the concept of event propagation in JavaScript.
+128. Implement a function to sort an array of integers using the quicksort algorithm.
+129. What is the purpose of the use strict directive in JavaScript?
+130. Write a function to convert a string to camel case.
+131. Explain the concept of lexical scoping in JavaScript.
+132. Implement a function to calculate the square root of a number without using built-in methods.
+133. What are the differences between call(), apply(), and bind() methods in JavaScript?
+134. Write a function to find the longest substring without repeating characters.
+135. Explain the purpose of the Promise.all() method in JavaScript.
+136. Implement a function to remove all duplicates from an array without using extra space.
+137. What are the differences between ==, ===, and Object.is() in JavaScript?
+138. Write a function to find the missing number in an array of integers from 1 to n.
+139. Explain the concept of closure in JavaScript and provide an example.
+140. Implement a function to perform a binary search on a sorted array.
+141. What are the advantages of using arrow functions in JavaScript?
+142. Write a function to convert a string to kebab case.
+143. Explain the difference between function declarations and function expressions in JavaScript.
+144. Implement a function to find the intersection of two arrays.
+145. What are the differences between null and undefined in JavaScript?
+146. Write a function to find the maximum subarray sum in a given array.
+147. Explain the concept of the prototype chain in JavaScript.
+148. Implement a function to reverse a linked list.
+149. What are the differences between let, const, and var in JavaScript?
+150. Write a function to check if a given string is a palindrome.
+
+
+[6:43 am, 13/03/2024] Nishad Ali: Sure, here's a list of 200 React interview questions covering various aspects of React development:
+
+*React Basics:*
+
+1. What is React?
+2. What are the key features of React?
+3. Explain the virtual DOM in React.
+4. What is JSX?
+5. How do you create a React component?
+6. What is the difference between a functional component and a class component?
+7. How do you render elements in React?
+8. Explain the role of ReactDOM in React.
+9. What is the purpose of setState() in React?
+10. How do you pass data between components in React?
+11. Explain the concept of props in React.
+12. What are the lifecycle methods of a React component?
+13. How do you handle events in React?
+14. Explain the concept of keys in React lists.
+15. What are fragments in React?
+16. How do you conditionally render elements in React?
+17. Explain the role of React.Fragment in React.
+18. What is the purpose of refs in React?
+19. How do you create controlled components in React?
+20. What is the difference between controlled and uncontrolled components in React?
+21. Explain the purpose of dangerouslySetInnerHTML in React.
+22. How do you handle forms in React?
+23. What are error boundaries in React?
+
+*React Hooks:*
+
+24. What are React Hooks?
+25. Explain the useState hook in React.
+26. How do you use the useEffect hook in React?
+27. What is the useCallback hook used for?
+28. Explain the useMemo hook in React.
+29. What is the useRef hook used for?
+30. How do you use custom hooks in React?
+31. Explain the useReducer hook in React.
+32. What are the rules of hooks in React?
+33. How do you create a custom hook in React?
+34. Explain the useContext hook in React.
+35. What is the useLayoutEffect hook used for?
+36. How do you use the useImperativeHandle hook in React?
+37. Explain the useDebugValue hook in React.
+38. What is the useReducer hook used for?
+
+*React Router:*
+
+39. What is React Router?
+40. How do you install React Router in a React project?
+41. Explain the purpose of <BrowserRouter> and <HashRouter> in React Router.
+42. How do you define routes in React Router?
+43. Explain the purpose of <Route> component in React Router.
+44. How do you handle nested routes in React Router?
+45. What is the purpose of the <Switch> component in React Router?
+46. How do you navigate programmatically in React Router?
+47. What is the difference between Link and NavLink components in React Router?
+48. Explain the concept of route parameters in React Router.
+49. How do you handle 404 errors in React Router?
+50. Explain the purpose of the withRouter higher-order component in React Router.
+
+*Redux:*
+
+51. What is Redux?
+52. How do you install Redux in a React project?
+53. Explain the concept of store in Redux.
+54. What are actions and action creators in Redux?
+55. How do you define reducers in Redux?
+56. What is the purpose of the combineReducers function in Redux?
+57. How do you dispatch actions in Redux?
+58. Explain the concept of middleware in Redux.
+59. How do you connect a React component to Redux?
+60. What is the purpose of the mapStateToProps function in Redux?
+61. How do you use selectors in Redux?
+62. Explain the purpose of the connect function in Redux.
+63. How do you handle asynchronous actions in Redux?
+64. What are thunks in Redux?
+65. Explain the purpose of the Redux DevTools.
+66. How do you use Redux with React Hooks?
+67. What are the benefits of using Redux in a React application?
+68. Explain the concept of immutability in Redux.
+69. How do you structure a Redux store for a large application?
+
+*React Performance Optimization:*
+
+70. What are the common performance issues in React applications?
+71. How do you optimize rendering performance in React?
+72. Explain the concept of memoization in React.
+73. How do you use memoization techniques to optimize functional components?
+74. What are React.PureComponent and React.memo used for?
+75. How do you optimize performance using shouldComponentUpdate method?
+76. What are the benefits of using React.memo?
+77. Explain the purpose of the useMemo hook in React.
+78. How do you optimize performance using the useCallback hook?
+79. What are the techniques to reduce unnecessary re-renders in React?
+80. How do you measure the performance of a React application?
+81. Explain the significance of React's reconciliation process in performance optimization.
+82. What are some tools for performance profiling in React?
+83. How do you lazy load components in React to improve performance?
+84. What is code splitting in React and how does it improve performance?
+
+*Testing React Applications:*
+
+85. What are the different testing libraries for React applications?
+86. How do you perform unit testing in React using Jest?
+87. What is the purpose of Jest's snapshot testing feature?
+88. How do you test React components using Enzyme?
+89. What is the purpose of React Testing Library?
+90. How do you write integration tests for React applications?
+91. Explain the concept of mocking in unit testing React applications.
+92. What are the benefits of writing tests for React components?
+93. How do you mock API calls in React component tests?
+94. What are the best practices for testing React applications?
+95. How do you test Redux-connected components in React applications?
+96. What is the purpose of Cypress in testing React applications?
+97. How do you write end-to-end tests for React applications using Cypress?
+98. Explain the difference between shallow rendering and full rendering in React component tests.
+99. How do you test user interactions in React components?
+100. What are the common pitfalls to avoid when writing tests for React applications?
+
+*React Best Practices:*
+
+101. What are the key principles of writing maintainable React code?
+102. How do you organize files and folders in a React project?
+103. What are the benefits of using functional components over class components?
+104. What are the best practices for naming components in React?
+105. How do you handle global state management in a large React application?
+106. What are the benefits of using PropTypes in React?
+107. How do you structure CSS styles in a React project?
+108. Explain the concept of code splitting in React.
+109. What are the best practices for handling forms in React?
+110. How do you handle authentication and authorization in a React application?
+111. What are the considerations for optimizing images in a React application?
+112. How do you handle routing in a React application?
+113. Explain the concept of lazy loading in React and its benefits.
+114. What are the common patterns for managing side effects in React applications?
+115. How do you handle internationalization (i18n) in a React application?
+116. What are the best practices for handling error boundaries in React?
+117. How do you optimize performance for server-side rendering in React?
+118. Explain the concept of code splitting and its benefits in a React application.
+119. What are the best practices for deploying a React application?
+120. How do you implement server-side rendering in a React application?

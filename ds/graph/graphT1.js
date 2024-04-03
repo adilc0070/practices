@@ -25,7 +25,7 @@ class Graph{
     hasEdge(vertex1,vertex2){
         if(!this.adgList[vertex1]||this.adgList[vertex2]) return false
         return this.adgList[vertex1].has(vertex2)&&this.adgList[vertex2].has(vertex1)
-    }
+    }   
     removeEdge(vertex1,vertex2){
         this.adgList[vertex1].delete(vertex2)
         this.adgList[vertex2].delete(vertex1)

@@ -1,0 +1,18 @@
+Dear Josmi,
+
+I am writing to express my interest in the Backend Developer position at BHN Rewards, as advertised. With a strong foundation on NodeJs and other modern technologies like MongoDB, Express, React, Node.js, I am excited about the opportunity to contribute to your team and make a significant impact on your projects.
+
+Having successfully completed over 10 open projects in my career, I have honed my skills in a wide range of technologies including NodeJs, JavaScript,REST Apis, Data structures and algorithms, MySQL, React. My expertise extends to back-end development with Node.js and Express, utilizing databases like MongoDB, and leveraging cloud services like Firebase and AWS to create scalable and efficient solutions. 
+
+What sets me apart is not only my technical proficiency but also my passion for creating adapteble backend applications to new technologies and project requirements. I thrive in dynamic environments where innovation and creativity are valued, and I am constantly seeking opportunities to challenge myself and expand my skill set.
+
+In addition to my technical skills, I bring strong communication and collaboration abilities, allowing me to effectively work with cross-functional teams and stakeholders to deliver high-quality solutions that meet business objectives. I am a self-motivated learner who is always eager to take on new challenges and contribute innovative ideas to drive project success. My strong communication skills enable me to convey complex technical concepts in a clear and concise manner, fostering effective collaboration and understanding among team members.
+
+I am particularly drawn to BHN Rewards because of its reputation for innovation and commitment to excellence. I am excited about the prospect of joining a team of talented professionals who share my passion for pushing boundaries and delivering cutting-edge solutions.
+
+Thank you for considering my application. I am enthusiastic about the opportunity to further discuss how my skills and experiences align with the needs of BHN Rewards. Please find my resume attached for your review. I am available at your earliest convenience for an interview, and I look forward to the possibility of contributing to your team.
+
+Warm regards,
+
+Adil C
+adilc0070@gmail.com
