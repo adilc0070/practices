@@ -53,36 +53,143 @@ event loop & code execution
 find the longest word in a string
     ()
 aggregate queries involving multiple stages
-user agent
-express.json & urlencoded
-query param & path params - usecases
-identifiers
-continue
-event loop
-JSON methods
-default parameters
-local storage vs session storage
-object methods
-util module
-OPTIONS
-threads
-error first callback
-$all
-Journaling
-$addToSet
-$expr
-pure components
-core principles of Redux
-principles of REST
-peek
-types of hash functions
-degree of a node
+    (
+        in Mongodb aggregation is a type of data Read operations in this method we can possible to perform multiple type of stages like match, group, project, sort and limit.
+        after we will get some 
+    )
+user agent (
+    in nodejs we can get information about the browser and operating system of the user
+)
 
+express.json & urlencoded (
+    express.json is a middleware that parses incoming requests convert in to JSON format.
+    urlencoded :URL encoding is a method used to convert data into a format that can be transmitted over the internet. URLs (Uniform Resource Locators) can only contain a limited set of characters, so any characters outside of this set must be encoded to ensure they are transmitted properly.
+                URL encoding works by replacing non-alphanumeric characters with a "%" followed by their ASCII hexadecimal representation. 
+)
 
-IIFE syntax
-generator function practical
-Weakset
-Weakmap
+query param & path params - usecases(
+        Path Parameters:
+            Path parameters are used to identify a specific resource within a URL path.
+            They are part of the URL path itself and typically come after the base URL and endpoint.
+            They are denoted by a colon (:) followed by the parameter name in the URL path.
+            Path parameters are often used to retrieve a specific resource or perform operations on a resource identified by a unique identifier.
+            Example: In the URL /users/:userId, :userId is a path parameter representing the unique identifier of a user.
+        Query Parameters:
+            Query parameters are used to provide additional information to the server as key-value pairs.
+            They are appended to the end of a URL after a question mark (?), and multiple parameters are separated by ampersands (&).
+            Query parameters are not part of the URL path but rather are appended as a string at the end of the URL.
+            They are often used for filtering, sorting, or specifying options in a request.
+            Example: In the URL /search?q=keyword&page=1, q and page are query parameters representing the search keyword and page number, respectively.
+)
+identifiers (
+    it is process of naming an object or function, variables for easyer to understand and read and reuse.
+)
+continue (it is a jump statement it is used to skip the current iteration and continue with the next iteration)
+
+event loop (it  is a process of checking the callstack and callbackqueue of a program and it take the callstacks operations and exicute the other stacks)
+
+JSON methods (json methods are json.stringify :it is used to convert the value to JSON object, it have 3 propertys : 1. value 2. replacer 3. no of spaces
+                 and json.parse: it is used to convert the string into object
+                )
+default parameters (in a function we can possible to initialize a parameter that type of parammiter is default parameter)
+
+local storage (
+    it is a Client side web storage that is used to store data in the browser for later use.
+    when we clear the local storage then only data's will be deleted.
+    it has some methods : 1. setItem 2. getItem 3. removeItem
+    Disadvantages: limited storage domein have 5mb to 10mb ,domain specific spaces, no encryption, blocking 
+) 
+
+session storage (
+    it also a local storage but it is used to store data in the browser for later use when we close the browser then only data's will be deleted.
+    if we close the window that time only it will be deleted. 
+)
+
+object methods(
+    in js we can possible to call methods of an object like Object.keys,values and entries
+)
+
+util module (
+    it is a built in module that provides a set of utility functions for Node.js.
+    it mainly used to working with the debuging or asynchronous operations.
+)
+
+OPTIONS (
+    it is a method used to send an OPTIONS request to the server.
+    it is used to check the validity of an HTTP request. like get post put and delete
+)
+
+threads (
+    treads is a process of running mutiple operations in a parallel process.
+    in js treads are handled by the threadpool module: it is a module that provides a pool of worker threads that can be used to execute asynchronous tasks in parallel.
+                                                        if one tread operations is done that time it will be executed by another tread in that free space
+)
+
+error first callback (
+    the first argument should be error
+)
+
+$all(
+    it is array operator in mongodb perform with find or match operator for finding the all included documents
+)
+
+Journaling (
+    in mongodb everithing is a journaling it is used to keep track of changes in a database.
+)
+
+$addToSet (
+    it is a array method in mongodb used to push a value in to a field but it is contain only unique values not add the duplicate value
+)
+
+$expr (
+    this operator is allow to use the expression in the query with multiple fields in a document
+)
+
+core principles of Redux(
+    single source of truth,immutability and pure functions, 
+)
+
+principles of REST(
+    rest means Representational State Transfer it is mainly used for web development.
+    it is used for creating and managing web services.
+    principles of rest are 1. client-server model사 2. stateless communication 3. uniform interface 4. cacheable responses 5. layering 6. code on demand
+)
+
+peek (
+    peak is representing the top of the value in dataStucture
+)
+
+types of hash functions(
+    Separate chaining(bucketing)
+    Linear probing (clustering)
+    Quadratic probing (clustering)
+    Hashing (hash the key with using the ASCII values)
+    Double hashing (hash the key with using the ASCII values)
+
+)
+
+degree of a node( it representing the number of edges in the graph, in tree case it is the number of children)
+
+IIFE syntax(
+    (()=>{...function body...})() || (function (){.....function body.....})()
+)
+
+generator function practical (
+    function* gen(){
+        yield 1
+        yield 2
+        yield 3
+    }
+    const iterator = gen();
+
+    console.log(iterator.next().value); // Output: 1
+    console.log(iterator.next().value); // Output: 2
+    console.log(iterator.next().value); // Output: 3
+    console.log(iterator.next().value)
+)
+
+Weakset (week set is contain the weekest element in the set)
+Weakmap (week )
 Object.seal
 prototype pollution
 Proxy object
