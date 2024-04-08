@@ -188,20 +188,63 @@ generator function practical (
     console.log(iterator.next().value)
 )
 
-Weakset (week set is contain the weekest element in the set)
-Weakmap (week )
-Object.seal
-prototype pollution
-Proxy object
-constructor function
-function composition
-nullish operator
-Promise.race vs Promise.any
-flatMap
+Weakset (WeakSet is a collection of objects, where each object may only occur once within the set. Unlike regular sets, weak sets do not prevent objects from being garbage-collected if they are not referenced elsewhere in the program. This means that if an object is added to a WeakSet, and there are no other references to that object, it may be garbage-collected.)
 
-threadpool
-event driven programming
-spawn vs fork
+Weakmap (WeakMap is also a object when we adding an object to it, it has 2 properties : 1. key 2. value)
+
+Object.seal (
+    it is object method it is mainly used to prevent the new keys while the object is sealed.
+    in this method we can possible to update the existing key's values
+)
+
+prototype pollution(
+    it is volnorablity in js where an attacker can modify the prototype of a built-in object or a commonly used object in a way that affects all instances of that object type. This can lead to unexpected behavior or security vulnerabilities in the application
+)
+
+Proxy object(
+    it is an object that allows you to intercept and mutate the properties of an object at runtime.
+)
+
+constructor function(
+    function cons(name,age){
+        this.name = name
+        this.age = age
+    }
+    let obj = new cons("nishad",22)
+)
+
+function composition (
+    when we using multiple functions in one function that is composition function
+)
+nullish operator(
+    when we using nullish operator it avoid the null or undefined value 
+    ?? this is the operator eg:- a ?? b if a is null/undefined it take b else the both are null/undefined it take a 
+)
+Promise.race (
+    it is a promise method it return the first nested promise result it check the all the nested promise are resolved or not
+) 
+
+Promise.any (
+    it return the any nested promise result when any promise resoled the main promise will be resolve 
+)
+flatMap (
+    is a method available on arrays in JavaScript that combines the functionality of both map() and flat() methods. It iterates over each element of the array, applies a mapping function to each element, and then flattens the resulting array of arrays into a single array
+)
+
+threadpool (
+    threadpool is a mechanism that allows multiple tasks to be executed in parallel.
+    it handling the treads, 
+)
+
+event driven programming (
+    in a program are triggered by events. These events could be things like when a user clicks a button or types on a keyboard, or when data is received from a network. Instead of following a fixed sequence of steps, the program reacts to events as they happen.
+)
+spawn (
+    spawning usually refers to the creation of child processes using Node.js, which is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js provides the child_process module, which allows you to spawn new processes and communicate with them.
+) 
+fork (
+    it is a method used to create a new process in Node.js.
+)
 exec
 execFile
 app.locals
@@ -220,11 +263,11 @@ native events
 transpiler
 deadcode elimination
 
-Hashed indexing
+Hashed indexing( hashed indexing refers to the process of creating an index using a hash function on one or more fields in a collection. This type of indexing allows for efficient queries based on equality matches but does not support range-based queries.)
 TTL index
-database profiler
-covered query
-clustered collection
+database profiler( database profiler is a diagnostic tool that collects detailed information about the operations performed on a MongoDB instance. It helps administrators and developers analyze the performance of queries, commands, and write operations executed against the database.)
+covered query( index-covered query or index-only query, is a type of query in MongoDB where all the fields specified in the query are part of an index, and MongoDB can fulfill the query solely by accessing the index without having to examine any documents.)
+clustered collection(clustered collection refers to a collection that uses the WiredTiger storage engine's clustered indexing feature. Clustered indexing is a storage optimization technique that physically orders documents in the collection based on the index keys. )
 $merge
 $facet
 $elemMatch
@@ -234,38 +277,48 @@ $pullAll
 $out
 Aggregate practicsls
 
-segment tree
-double hashing
-load factor
-monotonic stack
-Serialize a binary tree
-Tarjan’s algorithm
-double ended queue
-linear probing
-quadratic probing
-Open addressing
-Separate Chaining
-suffix tree
-Red-Black Tree
-AVL tree
-Sparse array
-Jagged array
-Divide and conquer technique
-STRUCTURED CLONE
-DEEP CLONING IN JS
-PROXY OBJECT
-OBJECT PROTOTYPES
-DEBOUNCING
-THROTTLING
-WEAKSET
-WEAKMAP
-DRAWBACKS OF CLOSURE
+segment tree (data structure used for efficiently answering range queries and updating values in an array. It is particularly useful for operations like finding the sum, minimum, maximum, or other aggregate values within a specified range of indices in the array.)
+double hashing (is a technique used in hash tables to resolve collisions that occur when two different keys hash to the same index. It involves applying a second hash function to the original key to compute an alternate index, which can then be used to find an available slot in the hash table.)
+load factor (
+    load factor is a measure of how full the hash table is. It's typically expressed as the ratio of the number of stored elements (or keys) to the total number of slots in the hash table. The load factor helps determine when to resize the hash table to maintain performance.
+    The load factor is calculated using the following formula:Load Factor= Number of Stored Elements/ Total Number of Slots )
 
-REACT LATEST FEATURES
-TRANSPILER VS COMPILER
-PURE COMPONENTS
-PROP TYPES
-ERROR BOUNDARY
+monotonic stack (that maintains a specific ordering property of its elements. In a monotonic stack, the elements are either strictly increasing or strictly decreasing from bottom to top.)
+Serialize a binary tree (converting the tree structure into a string representation that can be stored or transmitted and later reconstructed back into the original tree structure. One common approach to serialize a binary tree is to use a preorder traversal (root-left-right) and represent each node as a string containing its value. Null nodes are represented by a special character to indicate absence.)
+Tarjan’s algorithm ( is used to find strongly connected components (SCCs) in a directed graph)
+double ended queue (we can perform the enqueue and dequeue in the both side in noraml queue we can only possible to do the front side )
+linear probing (is a collision resolution technique used in hash tables to handle collisions when two different keys hash to the same index or bucket. Instead of immediately storing the collided element in the same bucket, linear probing searches for the next available (unoccupied) bucket in the hash table to store the collided element.)
+quadratic probing (it check the next probing possition for add this key value )
+Open addressing ( it is the main probing handling technique that's are linear, quadratic, double hasing techniques )
+
+suffix tree (used primarily in string processing for efficiently storing and finding substrings within a larger string. It is particularly useful for tasks such as pattern matching, substring searching, and text compression.)
+
+Red-Black Tree(it is also a tree type dataStucture in this tree it store an additional propertie red / black initial insert it read the next insertion it change to black it also following the bst formulas)
+AVL tree (it a self balensing tree  AVL trees are designed to ensure that the tree remains approximately balanced, which helps to guarantee efficient performance for insertion, deletion, and search operations.)
+Sparse array (the array is full this type of array is sparse array)
+Jagged array (it is 2Dimentinal array the nested arrays are different sizes)
+Divide and conquer technique (in quicksort and merge sorts are following this technique,it dived at the most from and merge )
+STRUCTURED CLONE( it follow the deep copy mechanism it make a exact copy object )
+DEEP CLONING IN JS(it is copy of the main object the coppyed object changes is not affect the orginal 
+    eg:- 
+        let obj={name:"adil",place:{city:"vga,state:"KL"}}
+        let copyObj=JSON.parse(JSON.stringify(obj))
+)
+PROXY OBJECT (it allow to perform intercept and customaization performed the object )
+OBJECT PROTOTYPES (it is amechanisem it allow to inherit and method each objects have there own methods 
+    it can also possible to make new prototype like this objetname.prototype.methodName=()=>{} // proto:1 like this   
+)
+
+DEBOUNCING ( it used to handle the frequantly invocation of a function it limit with a specific interval )
+THROTTLING (it also used to limit the invocation of a function with a spesific time after the first click)
+
+DRAWBACKS OF CLOSURE (memory usage,performance overhead, readablity and maintainablity )
+
+REACT LATEST FEATURES (react hooks, context api, react suspence, error boundariesm, react memo)
+TRANSPILER VS COMPILER (transpiler is convert on source code to another source code ,the compiler is convert high level language to low level language)
+
+PROP TYPES ( it used to provide a default values and validations providing feature in react )
+ERROR BOUNDARY (used to )
 AUTOMATIC BATCHING
 AXIOS CANCEL TOKEN
 REACT CONCURRENT

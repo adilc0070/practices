@@ -38,4 +38,5 @@
 // //   console.log(MyLibrary.getOption('timeout')); // Outputs: 3000
   
 // console.log(3+5+'7');
-isNan
+
+//constructor function 
